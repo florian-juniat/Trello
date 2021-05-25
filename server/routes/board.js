@@ -263,7 +263,7 @@ router.post("/:id/asign-user", async (req, res) => {
             service: 'gmail',
             auth: {
                 user: 'jeanmarcelleaugustin@gmail.com',
-                pass: 'cm7vuhgqudth'
+                pass: 'fakePassword'
             }
         });
         var name_board = await client.query("select name from boards where id = " + req.params.id + ";");

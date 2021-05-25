@@ -53,7 +53,7 @@ router.post("/register", async (req, res) => {
                 service: 'gmail',
                 auth: {
                     user: 'jeanmarcelleaugustin@gmail.com',
-                    pass: 'cm7vuhgqudth'
+                    pass: 'fakePassword'
                 }
             });
             var url = "http://localhost:8080/auth/verify/".concat(token);
