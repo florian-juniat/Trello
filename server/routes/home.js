@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
         res.status(401).send("Missing token.");
         return;
     }
-    var token = req.headers.authorization;
+    var token = req.headers.authorization;  
     var decoded = jwt.verify(token, 'T1pha1n9_n4_p4s_d_st4g9');
     const response = await client.query("select * from boards where '" + decoded.indice + "' = ANY(memb_id);");
     res.status(200).send(response.rows);
